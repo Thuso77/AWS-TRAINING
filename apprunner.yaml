@@ -1,4 +1,8 @@
 version: 1.0
-runtime: python
+runtime: python39  # Check AWS for latest supported versions
 build:
-  dockerfilePath: ./Dockerfile
+  buildCommand: "pip install -r requirements.txt"
+run:
+  command: "python app.py"
+  network:
+    port: 8000
