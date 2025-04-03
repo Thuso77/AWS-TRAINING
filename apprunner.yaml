@@ -1,8 +1,9 @@
 version: 1.0
-runtime: python39  # Check AWS for latest supported versions
 build:
-  buildCommand: "pip install -r requirements.txt"
+  dockerfilePath: ./Dockerfile  # Ensure the Dockerfile path is correct
 run:
-  command: "python app.py"
   network:
-    port: 8000
+    port: 8000  # Adjust based on your app's exposed port
+  environmentVariables:
+    - name: ENV
+      value: "production"
