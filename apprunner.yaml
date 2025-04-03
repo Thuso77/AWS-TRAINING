@@ -1,9 +1,0 @@
-version: 1.0
-build:
-  dockerfilePath: ./Dockerfile  # Ensure the Dockerfile path is correct
-run:
-  network:
-    port: 8000  # Adjust based on your app's exposed port
-  environmentVariables:
-    - name: ENV
-      value: "production"
