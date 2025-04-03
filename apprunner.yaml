@@ -1,0 +1,9 @@
+version: 1.0
+build:
+  dockerfilePath: ./Dockerfile  # Ensure this path is correct
+run:
+  network:
+    port: 8000  # Change this if your app uses a different port
+  environmentVariables:
+    - name: ENV
+      value: "production"
