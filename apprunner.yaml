@@ -1,9 +1,0 @@
-version: 1.0
-build:
-  dockerfilePath: ./Dockerfile  # Ensure your Dockerfile is in the root directory
-run:
-  network:
-    port: 80  # Apache HTTPD runs on port 80 by default
-  environmentVariables:
-    - name: ENV
-      value: "production"
